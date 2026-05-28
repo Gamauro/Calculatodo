@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IVA Online 2025 — Añadir y Quitar IVA Gratis | CalcuFácil</title>
+  <meta name="description" content="Calculadora de IVA online gratis. Añade o quita IVA al 21%, 10% o 4% de forma instantánea. Calcula base imponible, cuota de IVA y precio total. Actualizada 2025.">
+  <meta name="keywords" content="calculadora IVA, calcular IVA, quitar IVA, añadir IVA, IVA 21, IVA 10, IVA 4, base imponible IVA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://calcufacil.es/calculadora-iva">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de IVA 2025",
+    "url": "https://calcufacil.es/calculadora-iva",
+    "description": "Calcula el IVA al 21%, 10% o 4%: añade o resta IVA a cualquier importe. Actualizada 2025.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:#0a0e1a;--bg2:#0f1525;--bg3:#141c2e;--card:#141c2e;--card-hover:#1a2438;
+      --border:#1e2d47;--border-bright:#2a3d5a;
+      --accent:#10b981;--accent2:#059669;--accent-blue:#00d4ff;--accent-purple:#7c3aed;
+      --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--white:#ffffff;
+      --font:'Sora',sans-serif;--mono:'JetBrains Mono',monospace;
+      --radius:14px;--radius-sm:8px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(10,14,26,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-size:1.2rem;font-weight:800;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:8px;}
+    .logo-icon{width:28px;height:28px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-purple));border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;}
+    .logo span{color:var(--accent-blue);}
+    .nav-back{color:var(--text2);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:6px;transition:color 0.2s;}
+    .nav-back:hover{color:var(--accent-blue);}
+    .page-header{background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(16,185,129,0.1) 0%,transparent 60%),var(--bg);padding:56px 24px 48px;text-align:center;}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:6px;font-size:0.8rem;color:var(--text3);margin-bottom:20px;flex-wrap:wrap;}
+    .breadcrumb a{color:var(--text3);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--accent);}
+    .page-header h1{font-size:clamp(1.8rem,5vw,3rem);font-weight:800;color:var(--white);margin-bottom:12px;}
+    .page-header h1 em{font-style:normal;color:var(--accent);}
+    .page-header p{color:var(--text2);max-width:560px;margin:0 auto;font-size:1rem;}
+    .page-layout{max-width:1000px;margin:0 auto;padding:40px 24px 80px;}
+
+    /* IVA TYPE SELECTOR */
+    .iva-type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px;}
+    .iva-type-btn{background:var(--card);border:2px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center;cursor:pointer;transition:all 0.2s;font-family:var(--font);}
+    .iva-type-btn:hover{border-color:var(--accent);background:var(--card-hover);}
+    .iva-type-btn.active{border-color:var(--accent);background:rgba(16,185,129,0.1);}
+    .iva-type-btn .pct{font-size:1.6rem;font-weight:800;font-family:var(--mono);color:var(--accent);display:block;}
+    .iva-type-btn .label{font-size:0.78rem;color:var(--text3);margin-top:2px;}
+    .iva-type-btn.active .label{color:var(--accent);}
+
+    /* DIRECTION */
+    .direction-toggle{display:flex;gap:0;margin-bottom:28px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px;}
+    .dir-btn{flex:1;padding:10px;text-align:center;cursor:pointer;border-radius:calc(var(--radius-sm) - 2px);font-family:var(--font);font-size:0.875rem;font-weight:500;border:none;background:none;color:var(--text2);transition:all 0.2s;}
+    .dir-btn.active{background:var(--accent);color:var(--bg);font-weight:700;}
+
+    /* CALC */
+    .calc-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;}
+    .form-group{margin-bottom:20px;}
+    .form-group label{display:block;font-size:0.85rem;font-weight:600;color:var(--text2);margin-bottom:8px;}
+    .input-wrap{position:relative;}
+    .input-wrap input{width:100%;background:var(--bg3);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:13px 44px 13px 16px;font-family:var(--mono);font-size:1.1rem;font-weight:600;color:var(--white);outline:none;transition:border-color 0.2s,box-shadow 0.2s;}
+    .input-wrap input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(16,185,129,0.12);}
+    .input-suffix{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:0.9rem;color:var(--text3);font-family:var(--mono);pointer-events:none;}
+    .calc-btn{width:100%;padding:15px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--white);font-family:var(--font);font-size:1rem;font-weight:700;border:none;border-radius:var(--radius-sm);cursor:pointer;transition:opacity 0.2s,transform 0.1s;margin-top:8px;}
+    .calc-btn:hover{opacity:0.9;}
+    .calc-btn:active{transform:scale(0.99);}
+
+    /* RESULTS */
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;}
+    @media(max-width:500px){.results-grid{grid-template-columns:1fr;}}
+    .result-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center;transition:all 0.3s;}
+    .result-card.highlight{background:linear-gradient(135deg,rgba(16,185,129,0.12),rgba(5,150,105,0.08));border-color:rgba(16,185,129,0.35);}
+    .result-card .rc-label{font-size:0.75rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
+    .result-card .rc-value{font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--white);}
+    .result-card.highlight .rc-value{color:var(--accent);}
+    .result-card .rc-sub{font-size:0.75rem;color:var(--text3);margin-top:4px;}
+    .result-note{font-size:0.78rem;color:var(--text3);text-align:center;margin-top:16px;line-height:1.5;}
+
+    /* TABLES */
+    .ref-table{width:100%;border-collapse:collapse;margin:16px 0;}
+    .ref-table th{text-align:left;padding:10px 12px;font-size:0.78rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--border);background:var(--bg3);}
+    .ref-table td{padding:10px 12px;border-bottom:1px solid rgba(30,45,71,0.4);font-size:0.875rem;color:var(--text2);}
+    .ref-table tr:last-child td{border-bottom:none;}
+    .ref-table .iva-pct{font-family:var(--mono);font-weight:700;padding:3px 8px;border-radius:4px;}
+    .iva-21{background:rgba(0,212,255,0.1);color:var(--accent-blue);}
+    .iva-10{background:rgba(16,185,129,0.1);color:var(--accent);}
+    .iva-4{background:rgba(245,158,11,0.1);color:#f59e0b;}
+
+    .content-section{margin-bottom:48px;}
+    .content-section h2{font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:16px;margin-top:48px;}
+    .content-section h3{font-size:1.05rem;font-weight:600;color:var(--white);margin:20px 0 10px;}
+    .content-section p{color:var(--text2);font-size:0.9rem;line-height:1.8;margin-bottom:12px;}
+
+    .ad-slot-mid{background:var(--bg3);border:1px dashed var(--border);border-radius:var(--radius-sm);min-height:90px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:0.75rem;margin:32px 0;}
+    .ad-label{font-size:0.65rem;color:var(--text3);display:block;text-align:center;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.1em;}
+    .faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:12px;}
+    .faq-item h3{font-size:0.95rem;font-weight:600;color:var(--white);margin-bottom:8px;}
+    .faq-item p{font-size:0.875rem;color:var(--text2);}
+    footer{background:var(--bg2);border-top:1px solid var(--border);}
+    .footer-bottom{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.8rem;color:var(--text3);}
+    .footer-bottom a{color:var(--text3);text-decoration:none;margin:0 8px;}
+    .footer-bottom a:hover{color:var(--accent-blue);}
+
+    .related-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:16px;}
+    .related-tool{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-decoration:none;transition:all 0.2s;display:flex;align-items:center;gap:10px;}
+    .related-tool:hover{border-color:var(--border-bright);background:var(--card-hover);transform:translateY(-1px);}
+    .related-tool span:first-child{font-size:1.3rem;}
+    .related-tool .rt-name{font-size:0.875rem;font-weight:600;color:var(--white);}
+    .related-tool .rt-desc{font-size:0.75rem;color:var(--text3);}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🧮</span>Calcu<span>Fácil</span></a>
+    <a href="index.html" class="nav-back">← Todas las herramientas</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <nav class="breadcrumb">
+    <a href="index.html">Inicio</a> › <span>Fiscal</span> › <span>Calculadora IVA</span>
+  </nav>
+  <h1>Calculadora de <em>IVA</em> 2025</h1>
+  <p>Añade o quita IVA al 21%, 10% o 4% a cualquier importe. Resultado instantáneo con desglose completo.</p>
+</header>
+
+<div class="page-layout">
+
+  <!-- IVA TYPE SELECTOR -->
+  <div class="iva-type-grid">
+    <button class="iva-type-btn active" onclick="setIVA(21, this)">
+      <span class="pct">21%</span>
+      <span class="label">IVA General</span>
+    </button>
+    <button class="iva-type-btn" onclick="setIVA(10, this)">
+      <span class="pct">10%</span>
+      <span class="label">IVA Reducido</span>
+    </button>
+    <button class="iva-type-btn" onclick="setIVA(4, this)">
+      <span class="pct">4%</span>
+      <span class="label">IVA Superreducido</span>
+    </button>
+  </div>
+
+  <!-- DIRECTION -->
+  <div class="direction-toggle">
+    <button class="dir-btn active" id="btn-anadir" onclick="setDir('anadir', this)">➕ Añadir IVA (precio sin IVA → con IVA)</button>
+    <button class="dir-btn" id="btn-quitar" onclick="setDir('quitar', this)">➖ Quitar IVA (precio con IVA → sin IVA)</button>
+  </div>
+
+  <!-- CALC BOX -->
+  <div class="calc-box">
+    <div class="form-group">
+      <label id="input-label">Importe sin IVA (base imponible)</label>
+      <div class="input-wrap">
+        <input type="number" id="importe" placeholder="Ej: 1000" min="0" step="0.01" value="1000" oninput="calcularIVA()">
+        <span class="input-suffix">€</span>
+      </div>
+    </div>
+
+    <!-- LIVE RESULTS -->
+    <div class="results-grid" id="results-grid">
+      <div class="result-card" id="rc-base">
+        <div class="rc-label">Base imponible</div>
+        <div class="rc-value" id="r-base">1.000,00 €</div>
+        <div class="rc-sub">Precio sin IVA</div>
+      </div>
+      <div class="result-card" id="rc-cuota">
+        <div class="rc-label">Cuota IVA (21%)</div>
+        <div class="rc-value" id="r-cuota">210,00 €</div>
+        <div class="rc-sub">Importe del impuesto</div>
+      </div>
+      <div class="result-card highlight" id="rc-total">
+        <div class="rc-label">Total con IVA</div>
+        <div class="rc-value" id="r-total">1.210,00 €</div>
+        <div class="rc-sub">Precio final</div>
+      </div>
+    </div>
+
+    <div class="result-note">
+      Cálculo en tiempo real · Datos actualizados 2025 · Resultados orientativos para uso general
+    </div>
+  </div>
+
+  <!-- AD -->
+  <span class="ad-label" style="margin-top:32px">Publicidad</span>
+  <div class="ad-slot-mid">[Google AdSense — Anuncio In-Content]</div>
+
+  <!-- REFERENCE TABLE -->
+  <div class="content-section">
+    <h2>¿Qué tipo de IVA corresponde a cada producto?</h2>
+    <p>En España existen tres tipos de IVA, y saber cuál aplica a cada compra o factura es esencial para calcular correctamente el impuesto.</p>
+
+    <table class="ref-table">
+      <thead>
+        <tr><th>Tipo IVA</th><th>Porcentaje</th><th>Se aplica a…</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>General</strong></td>
+          <td><span class="iva-pct iva-21">21%</span></td>
+          <td>Mayoría de productos y servicios: ropa, electrónica, vehículos, servicios profesionales, telecomunicaciones…</td>
+        </tr>
+        <tr>
+          <td><strong>Reducido</strong></td>
+          <td><span class="iva-pct iva-10">10%</span></td>
+          <td>Alimentos no básicos, hostelería y restauración, transporte de viajeros, viviendas de nueva construcción, medicamentos…</td>
+        </tr>
+        <tr>
+          <td><strong>Superreducido</strong></td>
+          <td><span class="iva-pct iva-4">4%</span></td>
+          <td>Alimentos básicos (pan, leche, huevos, frutas, verduras), libros y revistas, medicamentos para uso humano, prótesis…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-section">
+    <h2>Preguntas frecuentes sobre el IVA</h2>
+    <div class="faq-item">
+      <h3>¿Cómo se calcula el IVA manualmente?</h3>
+      <p>Para <strong>añadir IVA</strong>: Precio con IVA = Base imponible × (1 + tipo/100). Ejemplo al 21%: 1.000 € × 1,21 = 1.210 €. Para <strong>quitar IVA</strong>: Base imponible = Precio con IVA ÷ (1 + tipo/100). Ejemplo: 1.210 € ÷ 1,21 = 1.000 €.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué es la base imponible del IVA?</h3>
+      <p>La base imponible es el precio del producto o servicio antes de aplicar el IVA. Sobre esta cantidad se calcula el porcentaje de IVA que corresponde. En las facturas siempre debe aparecer desglosada la base imponible y la cuota de IVA.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿El IVA es igual en toda España?</h3>
+      <p>Los tipos generales (21%, 10%, 4%) son iguales en toda la Península y Baleares. Sin embargo, Canarias, Ceuta y Melilla tienen regímenes fiscales especiales: en Canarias se aplica el IGIC (Impuesto General Indirecto Canario), con tipos distintos al IVA peninsular.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuándo no se aplica IVA?</h3>
+      <p>Algunas operaciones están exentas de IVA: servicios médicos y sanitarios, servicios educativos, seguros, operaciones financieras, alquileres de vivienda habitual y actividades de interés general. En estos casos, la factura no incluye cuota de IVA.</p>
+    </div>
+  </div>
+
+  <!-- RELATED TOOLS -->
+  <h2 style="font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:16px;">Herramientas relacionadas</h2>
+  <div class="related-tools">
+    <a href="calculadora-salario-neto.html" class="related-tool">
+      <span>💰</span><div><div class="rt-name">Salario Neto</div><div class="rt-desc">Bruto a neto con IRPF</div></div>
+    </a>
+    <a href="calculadora-porcentaje.html" class="related-tool">
+      <span>%</span><div><div class="rt-name">Porcentaje</div><div class="rt-desc">Descuentos y aumentos</div></div>
+    </a>
+    <a href="calculadora-irpf.html" class="related-tool">
+      <span>📊</span><div><div class="rt-name">IRPF 2025</div><div class="rt-desc">Tramos y retención</div></div>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <a href="index.html">🧮 CalcuFácil</a>
+    <div>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="politica-de-privacidad.html">Privacidad</a>
+      <a href="politica-de-cookies.html">Cookies</a>
+    </div>
+    <span>© 2025 CalcuFácil.es</span>
+  </div>
+</footer>
+
+<script>
+  let ivaRate = 21;
+  let direction = 'anadir'; // 'anadir' or 'quitar'
+
+  function fmt(n) {
+    return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(n);
+  }
+
+  function setIVA(rate, btn) {
+    ivaRate = rate;
+    document.querySelectorAll('.iva-type-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    calcularIVA();
+  }
+
+  function setDir(dir, btn) {
+    direction = dir;
+    document.querySelectorAll('.dir-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const lbl = document.getElementById('input-label');
+    lbl.textContent = dir === 'anadir' ? 'Importe sin IVA (base imponible)' : 'Importe con IVA incluido';
+    calcularIVA();
+  }
+
+  function calcularIVA() {
+    const importe = parseFloat(document.getElementById('importe').value) || 0;
+    let base, cuota, total;
+
+    if (direction === 'anadir') {
+      base = importe;
+      cuota = base * (ivaRate / 100);
+      total = base + cuota;
+    } else {
+      total = importe;
+      base = total / (1 + ivaRate / 100);
+      cuota = total - base;
+    }
+
+    document.getElementById('r-base').textContent = fmt(base);
+    document.getElementById('r-cuota').textContent = fmt(cuota);
+    document.getElementById('r-total').textContent = fmt(total);
+    document.querySelector('#rc-cuota .rc-label').textContent = `Cuota IVA (${ivaRate}%)`;
+
+    if (direction === 'quitar') {
+      document.querySelector('#rc-total .rc-label').textContent = 'Total con IVA';
+      document.querySelector('#rc-total .rc-sub').textContent = 'Precio original';
+      document.querySelector('#rc-base .rc-label').textContent = 'Base imponible';
+      document.querySelector('#rc-base .rc-sub').textContent = 'Precio sin IVA';
+    } else {
+      document.querySelector('#rc-total .rc-label').textContent = 'Total con IVA';
+      document.querySelector('#rc-total .rc-sub').textContent = 'Precio final';
+      document.querySelector('#rc-base .rc-label').textContent = 'Base imponible';
+      document.querySelector('#rc-base .rc-sub').textContent = 'Precio sin IVA';
+    }
+  }
+
+  // Init
+  calcularIVA();
+</script>
+</body>
+</html>
