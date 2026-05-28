@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122185512525280"
+     crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalcuFácil — Calculadoras Online Gratis para España</title>
+  <meta name="description" content="Calculadoras online gratuitas para España: salario neto, IRPF, IVA, hipoteca, IMC, porcentajes y más. Resultados rápidos, precisos y actualizados 2025.">
+  <meta name="keywords" content="calculadora online, calculadora salario neto, calculadora IRPF, calculadora IVA, calculadora hipoteca, calculadora IMC">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://calcufacil.es/">
+  <meta property="og:title" content="CalcuFácil — Calculadoras Online Gratis para España">
+  <meta property="og:description" content="Calcula tu salario neto, IRPF, IVA, hipoteca y más. Gratis, rápido y sin registro.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcufacil.es/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CalcuFácil",
+    "url": "https://calcufacil.es",
+    "description": "Portal de calculadoras online gratuitas para España",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://calcufacil.es/buscar?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Son gratuitas todas las calculadoras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, todas las calculadoras de CalcuFácil son completamente gratuitas y no requieren registro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Con qué año fiscal están actualizadas las calculadoras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Todas las calculadoras están actualizadas con los tramos del IRPF y normativa fiscal vigente en 2025."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo usar CalcuFácil desde el móvil?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, CalcuFácil está diseñado mobile-first y funciona perfectamente en cualquier dispositivo."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg2: #0f1525;
+      --bg3: #141c2e;
+      --card: #141c2e;
+      --card-hover: #1a2438;
+      --border: #1e2d47;
+      --border-bright: #2a3d5a;
+      --accent: #00d4ff;
+      --accent2: #7c3aed;
+      --accent3: #10b981;
+      --accent4: #f59e0b;
+      --text: #e2e8f0;
+      --text2: #94a3b8;
+      --text3: #64748b;
+      --white: #ffffff;
+      --font: 'Sora', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.4);
+      --shadow-accent: 0 0 40px rgba(0,212,255,0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* === COOKIE BANNER === */
+    #cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--bg3);
+      border-top: 1px solid var(--border-bright);
+      padding: 16px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      z-index: 999;
+      font-size: 0.85rem;
+      color: var(--text2);
+    }
+    #cookie-banner a { color: var(--accent); }
+    .btn-cookie {
+      background: var(--accent);
+      color: var(--bg);
+      border: none; border-radius: var(--radius-sm);
+      padding: 8px 20px; font-weight: 600;
+      cursor: pointer; font-family: var(--font);
+      white-space: nowrap;
+    }
+
+    /* === NAV === */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,14,26,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-size: 1.35rem; font-weight: 800;
+      color: var(--white);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .logo-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+    }
+    .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex; gap: 4px; list-style: none;
+    }
+    .nav-links a {
+      color: var(--text2); text-decoration: none;
+      padding: 8px 14px; border-radius: var(--radius-sm);
+      font-size: 0.9rem; font-weight: 500;
+      transition: all 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); background: var(--bg3); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent), #0099cc) !important;
+      color: var(--bg) !important;
+      font-weight: 600 !important;
+    }
+    .hamburger {
+      display: none;
+      background: none; border: none;
+      color: var(--text); cursor: pointer;
+      font-size: 1.4rem;
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 64px; left: 0; right: 0;
+        background: var(--bg2);
+        border-bottom: 1px solid var(--border);
+        padding: 12px;
+      }
+    }
+
+    /* === HERO === */
+    .hero {
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,212,255,0.12) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 40% at 90% 50%, rgba(124,58,237,0.08) 0%, transparent 60%),
+                  var(--bg);
+      padding: 80px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(0,212,255,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(0,212,255,0.1);
+      border: 1px solid rgba(0,212,255,0.25);
+      color: var(--accent);
+      padding: 6px 14px; border-radius: 100px;
+      font-size: 0.8rem; font-weight: 600; font-family: var(--mono);
+      margin-bottom: 24px;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 800; line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 1.15rem; color: var(--text2);
+      max-width: 580px; margin: 0 auto 40px;
+      font-weight: 300;
+    }
+    .hero-search {
+      max-width: 560px; margin: 0 auto 48px;
+      position: relative;
+    }
+    .hero-search input {
+      width: 100%;
+      background: var(--card);
+      border: 1.5px solid var(--border-bright);
+      border-radius: 100px;
+      padding: 16px 60px 16px 24px;
+      font-family: var(--font); font-size: 1rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .hero-search input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,212,255,0.15);
+    }
+    .hero-search input::placeholder { color: var(--text3); }
+    .hero-search button {
+      position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+      background: var(--accent); border: none;
+      width: 42px; height: 42px; border-radius: 100px;
+      color: var(--bg); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+    }
+    .hero-search button:hover { background: #00b8d9; }
+    .hero-stats {
+      display: flex; gap: 32px; justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat strong {
+      display: block; font-size: 1.8rem; font-weight: 800;
+      color: var(--white); font-family: var(--mono);
+    }
+    .hero-stat span { font-size: 0.85rem; color: var(--text3); }
+
+    /* === AD SLOT === */
+    .ad-slot {
+      max-width: 1200px; margin: 0 auto;
+      padding: 8px 24px;
+      text-align: center;
+    }
+    .ad-slot-inner {
+      background: var(--bg3);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      color: var(--text3); font-size: 0.75rem;
+      min-height: 90px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ad-label {
+      font-size: 0.65rem; color: var(--text3);
+      text-align: center; display: block;
+      margin-bottom: 4px; text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* === MAIN CONTENT === */
+    main { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* === SECTION HEADER === */
+    .section-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-bottom: 28px; margin-top: 56px;
+      flex-wrap: wrap; gap: 8px;
+    }
+    .section-header h2 {
+      font-size: 1.6rem; font-weight: 700; color: var(--white);
+    }
+    .section-header h2 span { color: var(--accent); }
+    .see-all {
+      color: var(--accent); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .see-all:hover { text-decoration: underline; }
+
+    /* === TOOLS GRID === */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .tool-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-decoration: none;
+      display: flex; flex-direction: column; gap: 12px;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .tool-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-accent, var(--accent));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .tool-card:hover {
+      background: var(--card-hover);
+      border-color: var(--border-bright);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .tool-card:hover::before { transform: scaleX(1); }
+
+    .tool-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      background: var(--icon-bg, rgba(0,212,255,0.1));
+    }
+    .tool-card h3 {
+      font-size: 1rem; font-weight: 600; color: var(--white);
+      line-height: 1.3;
+    }
+    .tool-card p {
+      font-size: 0.875rem; color: var(--text2);
+      line-height: 1.5; flex: 1;
+    }
+    .tool-badge {
+      display: inline-flex; align-items: center;
+      background: rgba(16,185,129,0.1);
+      border: 1px solid rgba(16,185,129,0.2);
+      color: var(--accent3);
+      padding: 3px 10px; border-radius: 100px;
+      font-size: 0.75rem; font-weight: 600;
+      width: fit-content;
+    }
+    .tool-badge.popular {
+      background: rgba(0,212,255,0.1);
+      border-color: rgba(0,212,255,0.2);
+      color: var(--accent);
+    }
+    .tool-badge.new {
+      background: rgba(245,158,11,0.1);
+      border-color: rgba(245,158,11,0.2);
+      color: var(--accent4);
+    }
+    .tool-arrow {
+      color: var(--text3); font-size: 1rem;
+      transition: color 0.2s, transform 0.2s;
+      align-self: flex-end;
+    }
+    .tool-card:hover .tool-arrow {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+
+    /* === CATEGORIES === */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 56px;
+    }
+    .cat-chip {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text2);
+      font-size: 0.875rem; font-weight: 500;
+      transition: all 0.2s;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .cat-chip:hover {
+      border-color: var(--accent);
+      color: var(--white);
+      background: var(--card-hover);
+    }
+    .cat-chip span { font-size: 1.5rem; }
+
+    /* === WHY SECTION === */
+    .why-section {
+      margin: 72px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .why-section { grid-template-columns: 1fr; gap: 32px; }
+    }
+    .why-content h2 {
+      font-size: 1.8rem; font-weight: 800; color: var(--white);
+      margin-bottom: 16px; line-height: 1.25;
+    }
+    .why-content p {
+      color: var(--text2); margin-bottom: 24px; font-size: 0.95rem;
+    }
+    .why-points { display: flex; flex-direction: column; gap: 12px; }
+    .why-point {
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .why-point-icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: rgba(0,212,255,0.1);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+    }
+    .why-point-text strong {
+      display: block; color: var(--white);
+      font-size: 0.9rem; margin-bottom: 2px;
+    }
+    .why-point-text span {
+      font-size: 0.83rem; color: var(--text3);
+    }
+    .why-visual {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .calc-preview {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .calc-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 16px;
+      background: var(--bg3);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+    .calc-row label { font-size: 0.85rem; color: var(--text2); }
+    .calc-row .calc-val {
+      font-family: var(--mono);
+      font-size: 0.95rem; font-weight: 500;
+      color: var(--accent);
+    }
+    .calc-result {
+      background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(124,58,237,0.1));
+      border: 1px solid rgba(0,212,255,0.25);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .calc-result span { font-size: 0.85rem; color: var(--text2); }
+    .calc-result strong {
+      font-family: var(--mono); font-size: 1.4rem;
+      color: var(--accent3);
+    }
+
+    /* === FAQ === */
+    .faq-section { margin: 72px 0; }
+    .faq-section h2 {
+      font-size: 1.6rem; font-weight: 700; color: var(--white);
+      margin-bottom: 32px;
+    }
+    .faq-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 640px) { .faq-grid { grid-template-columns: 1fr; } }
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .faq-item h3 {
+      font-size: 0.95rem; font-weight: 600;
+      color: var(--white); margin-bottom: 8px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 8px;
+    }
+    .faq-item p {
+      font-size: 0.875rem; color: var(--text2); line-height: 1.6;
+    }
+
+    /* === POPULAR GUIDES === */
+    .guides-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .guide-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .guide-card:hover {
+      border-color: var(--border-bright);
+      background: var(--card-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .guide-tag {
+      display: inline-block;
+      padding: 3px 10px; border-radius: 4px;
+      font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    .guide-card h3 {
+      font-size: 1rem; font-weight: 600; color: var(--white);
+      margin-bottom: 8px; line-height: 1.4;
+    }
+    .guide-card p {
+      font-size: 0.85rem; color: var(--text2);
+    }
+    .guide-meta {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: 16px;
+      font-size: 0.78rem; color: var(--text3);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 56px 24px 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    .footer-brand p {
+      font-size: 0.875rem; color: var(--text3);
+      margin-top: 12px; line-height: 1.6; max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 0.82rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text3); margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col a {
+      color: var(--text2); text-decoration: none;
+      font-size: 0.875rem; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+      font-size: 0.8rem; color: var(--text3);
+    }
+    .footer-bottom a { color: var(--text3); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--accent); }
+
+    /* === SEARCH RESULTS === */
+    #search-results {
+      position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+      background: var(--card); border: 1px solid var(--border-bright);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: none; z-index: 50;
+      overflow: hidden;
+    }
+    #search-results.open { display: block; }
+    .search-result-item {
+      padding: 12px 20px;
+      display: flex; align-items: center; gap: 12px;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.15s;
+    }
+    .search-result-item:hover { background: var(--card-hover); }
+    .search-result-item span:first-child { font-size: 1.2rem; }
+    .search-result-item .sr-name {
+      font-size: 0.9rem; font-weight: 500; color: var(--white);
+    }
+    .search-result-item .sr-desc {
+      font-size: 0.78rem; color: var(--text3);
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up {
+      animation: fadeUp 0.5s ease both;
+    }
+    .fade-up-d1 { animation-delay: 0.1s; }
+    .fade-up-d2 { animation-delay: 0.2s; }
+    .fade-up-d3 { animation-delay: 0.3s; }
+
+    .counter { font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner">
+  <p>Usamos cookies propias y de terceros para analítica y mostrarte anuncios relevantes. <a href="politica-de-cookies.html">Más info</a></p>
+  <button class="btn-cookie" onclick="document.getElementById('cookie-banner').style.display='none'">Aceptar</button>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🧮</span>
+      Calcu<span>Fácil</span>
+    </a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="calculadora-salario-neto.html">Salario Neto</a></li>
+      <li><a href="calculadora-irpf.html">IRPF</a></li>
+      <li><a href="calculadora-iva.html">IVA</a></li>
+      <li><a href="calculadora-hipoteca.html">Hipoteca</a></li>
+      <li><a href="#herramientas">Más herramientas</a></li>
+      <li><a href="guias.html" class="nav-cta">Guías</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">✦ Actualizado 2025 · Gratis · Sin registro</div>
+  <h1 class="fade-up">Las calculadoras que<br>España realmente <em>necesita</em></h1>
+  <p class="hero-sub fade-up fade-up-d1">Salario neto, IRPF, IVA, hipoteca, IMC y 30+ herramientas más. Resultados instantáneos, actualizados y precisos.</p>
+
+  <div class="hero-search fade-up fade-up-d2">
+    <input type="search" id="hero-search-input" placeholder="Busca una calculadora... (ej: salario, IVA, hipoteca)" autocomplete="off">
+    <button type="button">🔍</button>
+    <div id="search-results">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+
+  <div class="hero-stats fade-up fade-up-d3">
+    <div class="hero-stat">
+      <strong class="counter" data-target="35">0</strong>
+      <span>herramientas disponibles</span>
+    </div>
+    <div class="hero-stat">
+      <strong class="counter" data-target="2500000">0</strong>
+      <span>cálculos realizados</span>
+    </div>
+    <div class="hero-stat">
+      <strong>2025</strong>
+      <span>datos actualizados</span>
+    </div>
+    <div class="hero-stat">
+      <strong>100%</strong>
+      <span>gratuito</span>
+    </div>
+  </div>
+</section>
+
+<!-- Ad Slot Top Banner -->
+<div style="max-width:1200px;margin:24px auto;padding:0 24px;">
+  <span class="ad-label">Publicidad</span>
+  <div class="ad-slot-inner">
+    <!-- Google AdSense: data-ad-slot BANNER 728x90 o responsive -->
+    <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+    [Espacio publicitario — Banner 728×90]
+  </div>
+</div>
+
+<main>
+
+  <!-- HERRAMIENTAS POPULARES -->
+  <div class="section-header" id="herramientas">
+    <h2>Herramientas <span>más usadas</span></h2>
+    <a href="todas-las-calculadoras.html" class="see-all">Ver todas →</a>
+  </div>
+
+  <div class="tools-grid">
+
+    <a href="calculadora-salario-neto.html" class="tool-card" style="--card-accent:#00d4ff;--icon-bg:rgba(0,212,255,0.1)">
+      <div class="tool-icon">💰</div>
+      <div class="tool-badge popular">⚡ Más popular</div>
+      <h3>Calculadora de Salario Neto</h3>
+      <p>Calcula cuánto cobras realmente cada mes después de IRPF y Seguridad Social. Introduce tu salario bruto anual y obtén el neto al instante.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+    <a href="calculadora-irpf.html" class="tool-card" style="--card-accent:#7c3aed;--icon-bg:rgba(124,58,237,0.1)">
+      <div class="tool-icon">📊</div>
+      <div class="tool-badge popular">⚡ Popular</div>
+      <h3>Calculadora de IRPF 2025</h3>
+      <p>Descubre qué porcentaje de IRPF te corresponde según tu salario. Tramos actualizados 2025 con retención mínima y máxima.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+    <a href="calculadora-iva.html" class="tool-card" style="--card-accent:#10b981;--icon-bg:rgba(16,185,129,0.1)">
+      <div class="tool-icon">🧾</div>
+      <div class="tool-badge">✓ Actualizado</div>
+      <h3>Calculadora de IVA</h3>
+      <p>Añade o resta IVA al instante. Calcula el IVA al 21%, 10% o 4% sobre cualquier importe. Incluye desglose completo.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+    <a href="calculadora-hipoteca.html" class="tool-card" style="--card-accent:#f59e0b;--icon-bg:rgba(245,158,11,0.1)">
+      <div class="tool-icon">🏠</div>
+      <div class="tool-badge popular">⚡ Popular</div>
+      <h3>Calculadora de Hipoteca</h3>
+      <p>Calcula tu cuota mensual hipotecaria según capital, tipo de interés y plazo. Con tabla de amortización completa y coste total.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+    <a href="calculadora-porcentaje.html" class="tool-card" style="--card-accent:#ec4899;--icon-bg:rgba(236,72,153,0.1)">
+      <div class="tool-icon">%</div>
+      <div class="tool-badge">✓ Gratis</div>
+      <h3>Calculadora de Porcentaje</h3>
+      <p>¿Qué % es X de Y? ¿Cuánto es el X% de Y? Calcula descuentos, aumentos, variaciones y proporciones fácilmente.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+    <a href="calculadora-imc.html" class="tool-card" style="--card-accent:#06b6d4;--icon-bg:rgba(6,182,212,0.1)">
+      <div class="tool-icon">⚖️</div>
+      <div class="tool-badge new">★ Renovada</div>
+      <h3>Calculadora de IMC</h3>
+      <p>Calcula tu Índice de Masa Corporal según peso y altura. Incluye clasificación OMS, peso ideal y rango saludable.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+    <a href="calculadora-dias-entre-fechas.html" class="tool-card" style="--card-accent:#8b5cf6;--icon-bg:rgba(139,92,246,0.1)">
+      <div class="tool-icon">📅</div>
+      <div class="tool-badge">✓ Gratis</div>
+      <h3>Calculadora de Días Entre Fechas</h3>
+      <p>Calcula los días, semanas o meses entre dos fechas. Incluye días laborables y festivos nacionales de España.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+    <a href="calculadora-edad.html" class="tool-card" style="--card-accent:#f97316;--icon-bg:rgba(249,115,22,0.1)">
+      <div class="tool-icon">🎂</div>
+      <div class="tool-badge">✓ Gratis</div>
+      <h3>Calculadora de Edad</h3>
+      <p>Calcula tu edad exacta en años, meses y días a partir de tu fecha de nacimiento. Con cuenta regresiva hasta tu próximo cumpleaños.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+    <a href="conversor-euros-dolares.html" class="tool-card" style="--card-accent:#14b8a6;--icon-bg:rgba(20,184,166,0.1)">
+      <div class="tool-icon">💱</div>
+      <div class="tool-badge new">★ Nuevo</div>
+      <h3>Conversor de Divisas</h3>
+      <p>Convierte entre euros, dólares, libras y más de 30 divisas con tipos de cambio actualizados diariamente.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+
+  </div>
+
+  <!-- Ad Slot In-Content (between sections) -->
+  <div style="margin:40px 0;">
+    <span class="ad-label">Publicidad</span>
+    <div class="ad-slot-inner">
+      <!-- Google AdSense: data-ad-format="auto" responsive in-content -->
+      [Espacio publicitario — Anuncio In-Content Adaptable]
+    </div>
+  </div>
+
+  <!-- CATEGORÍAS -->
+  <div class="section-header">
+    <h2>Explorar por <span>categoría</span></h2>
+  </div>
+  <div class="cat-grid">
+    <a href="categoria-fiscal.html" class="cat-chip"><span>🏛️</span>Fiscal y laboral</a>
+    <a href="categoria-financiero.html" class="cat-chip"><span>💳</span>Finanzas</a>
+    <a href="categoria-salud.html" class="cat-chip"><span>❤️</span>Salud</a>
+    <a href="categoria-matematicas.html" class="cat-chip"><span>➗</span>Matemáticas</a>
+    <a href="categoria-fechas.html" class="cat-chip"><span>📆</span>Fechas y tiempo</a>
+    <a href="categoria-conversores.html" class="cat-chip"><span>🔄</span>Conversores</a>
+    <a href="categoria-vivienda.html" class="cat-chip"><span>🏡</span>Vivienda</a>
+    <a href="categoria-negocios.html" class="cat-chip"><span>📈</span>Negocios</a>
+  </div>
+
+  <!-- WHY SECTION -->
+  <div class="why-section">
+    <div class="why-content">
+      <h2>¿Por qué usar CalcuFácil?</h2>
+      <p>Diseñado para dar respuestas útiles en segundos, sin distracciones, sin registro y sin complicaciones.</p>
+      <div class="why-points">
+        <div class="why-point">
+          <div class="why-point-icon">✓</div>
+          <div class="why-point-text">
+            <strong>Datos fiscales actualizados 2025</strong>
+            <span>Tramos IRPF, tipos IVA y cotizaciones a la SS vigentes este año.</span>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">⚡</div>
+          <div class="why-point-text">
+            <strong>Resultados instantáneos</strong>
+            <span>Cálculo en tiempo real mientras escribes, sin recargar la página.</span>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">📱</div>
+          <div class="why-point-text">
+            <strong>Optimizado para móvil</strong>
+            <span>Interfaz fluida en cualquier dispositivo. Sin apps, sin instalación.</span>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">🔒</div>
+          <div class="why-point-text">
+            <strong>Sin registro ni datos personales</strong>
+            <span>Tus cálculos son tuyos. No guardamos ni compartimos tus datos.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <p style="font-size:0.78rem;color:var(--text3);margin-bottom:16px;font-family:var(--mono)">// Vista previa: Salario Neto</p>
+      <div class="calc-preview">
+        <div class="calc-row">
+          <label>Salario bruto anual</label>
+          <span class="calc-val">28.000 €</span>
+        </div>
+        <div class="calc-row">
+          <label>Retención IRPF</label>
+          <span class="calc-val">- 4.060 €</span>
+        </div>
+        <div class="calc-row">
+          <label>Seguridad Social</label>
+          <span class="calc-val">- 1.680 €</span>
+        </div>
+        <div class="calc-result">
+          <span>💰 Salario neto anual</span>
+          <strong>22.260 €</strong>
+        </div>
+        <div style="text-align:center;margin-top:4px">
+          <a href="calculadora-salario-neto.html" style="color:var(--accent);font-size:0.85rem;text-decoration:none;">Calcular el tuyo ahora →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUÍAS Y ARTÍCULOS -->
+  <div class="section-header">
+    <h2>Guías y <span>artículos</span></h2>
+    <a href="guias.html" class="see-all">Ver todas →</a>
+  </div>
+  <div class="guides-grid">
+    <a href="guias/como-calcular-salario-neto.html" class="guide-card">
+      <span class="guide-tag" style="background:rgba(0,212,255,0.1);color:var(--accent);">Laboral</span>
+      <h3>Cómo calcular tu salario neto desde el bruto en 2025</h3>
+      <p>Guía completa paso a paso para entender IRPF, Seguridad Social y cuánto recibes realmente en tu cuenta.</p>
+      <div class="guide-meta">📖 8 min lectura · Actualizado enero 2025</div>
+    </a>
+    <a href="guias/tramos-irpf-2025.html" class="guide-card">
+      <span class="guide-tag" style="background:rgba(124,58,237,0.1);color:#a78bfa;">Fiscal</span>
+      <h3>Tramos del IRPF 2025: tabla completa y cómo funciona</h3>
+      <p>Todos los tramos del impuesto sobre la renta explicados con ejemplos reales y simulaciones para cada nivel salarial.</p>
+      <div class="guide-meta">📖 12 min lectura · Actualizado enero 2025</div>
+    </a>
+    <a href="guias/tipos-iva-espana.html" class="guide-card">
+      <span class="guide-tag" style="background:rgba(16,185,129,0.1);color:var(--accent3);">IVA</span>
+      <h3>Tipos de IVA en España: 21%, 10%, 4% y cuándo aplica cada uno</h3>
+      <p>Guía definitiva sobre el IVA en España: qué productos y servicios llevan cada tipo y cómo calcularlo correctamente.</p>
+      <div class="guide-meta">📖 6 min lectura · Actualizado 2025</div>
+    </a>
+  </div>
+
+  <!-- Ad Slot Before FAQ -->
+  <div style="margin:48px 0 24px;">
+    <span class="ad-label">Publicidad</span>
+    <div class="ad-slot-inner">
+      [Espacio publicitario — Anuncio nativo 336×280]
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>¿Son gratuitas todas las calculadoras? ✦</h3>
+        <p>Sí, el 100% de las herramientas de CalcuFácil son completamente gratuitas, sin registro ni suscripción de ningún tipo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Con qué año fiscal están actualizadas? ✦</h3>
+        <p>Todas las calculadoras fiscales están actualizadas con los tramos del IRPF y normativa vigente en 2025, incluyendo las últimas modificaciones de la AEAT.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Son exactos los resultados? ✦</h3>
+        <p>Los resultados son orientativos y muy precisos para la mayoría de situaciones estándar. Para casos complejos (deducciones autonómicas, situaciones especiales) te recomendamos consultar a un asesor fiscal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Guardáis mis datos? ✦</h3>
+        <p>No. Todos los cálculos se realizan en tu navegador. No enviamos ni almacenamos ningún dato introducido en las calculadoras.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo usar CalcuFácil desde el móvil? ✦</h3>
+        <p>Sí, la web está diseñada mobile-first y es completamente responsive. Funciona perfectamente en smartphones, tablets y ordenadores.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Con qué frecuencia se actualiza el contenido? ✦</h3>
+        <p>Actualizamos todas las calculadoras fiscales al inicio de cada año fiscal y cuando la normativa cambia, para garantizar resultados precisos y actuales.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO Text Block -->
+  <section style="margin:56px 0;padding:32px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);">
+    <h2 style="font-size:1.35rem;color:var(--white);margin-bottom:16px;">Calculadoras online para España: herramientas útiles y gratuitas</h2>
+    <p style="color:var(--text2);font-size:0.9rem;line-height:1.8;margin-bottom:12px;">
+      CalcuFácil es el portal de referencia en España para cálculos fiscales, laborales y financieros. Nuestras calculadoras te permiten obtener resultados precisos en segundos, sin complicaciones y sin necesidad de registro.
+    </p>
+    <p style="color:var(--text2);font-size:0.9rem;line-height:1.8;margin-bottom:12px;">
+      La <strong style="color:var(--text)">calculadora de salario neto</strong> es nuestra herramienta más utilizada: con solo introducir tu <strong style="color:var(--text)">salario bruto</strong>, calculas automáticamente la retención de <strong style="color:var(--text)">IRPF</strong>, las cotizaciones a la <strong style="color:var(--text)">Seguridad Social</strong> y tu salario neto mensual y anual. Actualizada con los <strong style="color:var(--text)">tramos del IRPF 2025</strong>.
+    </p>
+    <p style="color:var(--text2);font-size:0.9rem;line-height:1.8;">
+      También puedes calcular el <strong style="color:var(--text)">IVA al 21%</strong>, estimar la cuota de tu <strong style="color:var(--text)">hipoteca</strong>, conocer tu <strong style="color:var(--text)">IMC</strong>, calcular porcentajes, convertir divisas y mucho más. Todas las herramientas son gratuitas, actualizadas y funcionan en tiempo real.
+    </p>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="font-size:1.2rem">
+          <span class="logo-icon">🧮</span>
+          Calcu<span>Fácil</span>
+        </a>
+        <p>Portal de calculadoras online gratuitas para España. Herramientas fiscales, financieras y de utilidad actualizadas 2025.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculadoras</h4>
+        <ul>
+          <li><a href="calculadora-salario-neto.html">Salario Neto</a></li>
+          <li><a href="calculadora-irpf.html">IRPF 2025</a></li>
+          <li><a href="calculadora-iva.html">IVA</a></li>
+          <li><a href="calculadora-hipoteca.html">Hipoteca</a></li>
+          <li><a href="calculadora-porcentaje.html">Porcentaje</a></li>
+          <li><a href="calculadora-imc.html">IMC</a></li>
+          <li><a href="todas-las-calculadoras.html">Ver todas →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Guías</h4>
+        <ul>
+          <li><a href="guias/como-calcular-salario-neto.html">Calcular salario neto</a></li>
+          <li><a href="guias/tramos-irpf-2025.html">Tramos IRPF 2025</a></li>
+          <li><a href="guias/tipos-iva-espana.html">Tipos de IVA</a></li>
+          <li><a href="guias/como-calcular-hipoteca.html">Calcular hipoteca</a></li>
+          <li><a href="guias.html">Todas las guías</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
+          <li><a href="politica-de-cookies.html">Política de cookies</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 CalcuFácil.es — Calculadoras online para España</span>
+      <span>Datos orientativos. Consulta siempre con un profesional para decisiones fiscales importantes.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Search functionality
+  const tools = [
+    { name: 'Calculadora de Salario Neto', desc: 'Bruto a neto con IRPF y SS', icon: '💰', url: 'calculadora-salario-neto.html' },
+    { name: 'Calculadora de IRPF', desc: 'Tramos 2025 actualizados', icon: '📊', url: 'calculadora-irpf.html' },
+    { name: 'Calculadora de IVA', desc: '21%, 10% y 4%', icon: '🧾', url: 'calculadora-iva.html' },
+    { name: 'Calculadora de Hipoteca', desc: 'Cuota y tabla de amortización', icon: '🏠', url: 'calculadora-hipoteca.html' },
+    { name: 'Calculadora de Porcentaje', desc: 'Descuentos, aumentos y más', icon: '%', url: 'calculadora-porcentaje.html' },
+    { name: 'Calculadora de IMC', desc: 'Índice de masa corporal', icon: '⚖️', url: 'calculadora-imc.html' },
+    { name: 'Calculadora de Días', desc: 'Entre dos fechas', icon: '📅', url: 'calculadora-dias-entre-fechas.html' },
+    { name: 'Calculadora de Edad', desc: 'Tu edad exacta', icon: '🎂', url: 'calculadora-edad.html' },
+    { name: 'Conversor de Divisas', desc: 'EUR, USD, GBP y más', icon: '💱', url: 'conversor-euros-dolares.html' },
+  ];
+
+  const input = document.getElementById('hero-search-input');
+  const results = document.getElementById('search-results');
+
+  input.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    if (!q) { results.classList.remove('open'); return; }
+    const filtered = tools.filter(t =>
+      t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)
+    );
+    if (!filtered.length) { results.classList.remove('open'); return; }
+    results.innerHTML = filtered.slice(0,5).map(t =>
+      `<a href="${t.url}" class="search-result-item">
+        <span>${t.icon}</span>
+        <div>
+          <div class="sr-name">${t.name}</div>
+          <div class="sr-desc">${t.desc}</div>
+        </div>
+      </a>`
+    ).join('');
+    results.classList.add('open');
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.hero-search')) results.classList.remove('open');
+  });
+
+  // Counter animation
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const duration = 1800;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(eased * target);
+      if (target >= 1000000) {
+        el.textContent = (current / 1000000).toFixed(1) + 'M';
+      } else {
+        el.textContent = current.toLocaleString('es-ES');
+      }
+      if (progress < 1) requestAnimationFrame(update);
+      else el.textContent = target >= 1000000 ? (target/1000000).toFixed(1)+'M' : target.toLocaleString('es-ES');
+    }
+    requestAnimationFrame(update);
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter(e.target);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.counter[data-target]').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
